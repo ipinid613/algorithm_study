@@ -1,18 +1,18 @@
 #내가 푼 답안(str로 계산하기)
-import sys
-
-n = str(sys.stdin.readline().strip('\n'))
-num = n
-cnt = 0
-while True:
-    if len(num) == 1:
-        num = "0" + num
-    plus = str(int(num[0]) + int(num[1]))  # str '8'
-    num = num[-1] + plus  # str '68' #[-1] = 제일 끝자리의 것 선택! / [-1]로 선택을 안 해두면 num이 세자리가 되는 경우 발생하여 오류남.
-    cnt += 1
-    if num == n:
-        print(cnt)
-        break
+# import sys
+#
+# n = str(sys.stdin.readline().strip('\n'))
+# num = n
+# cnt = 0
+# while True:
+#     if len(num) == 1:
+#         num = "0" + num
+#     plus = str(int(num[0]) + int(num[1]))  # str '8'
+#     num = num[-1] + plus  # str '68' #[-1] = 제일 끝자리의 것 선택! / [-1]로 선택을 안 해두면 num이 세자리가 되는 경우 발생하여 오류남.
+#     cnt += 1
+#     if num == n:
+#         print(cnt)
+#         break
 
 # import sys
 #
@@ -30,3 +30,19 @@ while True:
 #     if(num == n):
 #         break
 # print(cnt)
+
+#2회차
+input_num = str(input()) #26
+num = input_num
+cnt = 0
+while True:
+    a = int(num[0])+int(num[1]) #2+6 = 8 / 6+8=14
+    b = str(num[1])+str(a)[-1] # 6, 8 68 / 8,4 84
+    num = b
+    cnt += 1
+
+    if num ==input_num:
+        break
+print(cnt)
+
+
