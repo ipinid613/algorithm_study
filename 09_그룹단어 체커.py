@@ -15,12 +15,12 @@ n = int(input())
 
 count = n
 for _ in range(n):
-    word = input() # aba
+    word = input() # aba happy
     for i in range(len(word)-1):
         if word.find(word[i]) > word.find(word[i+1]):
             count -= 1
             break
 print(count)
 
-word = 'aba'
-print(word.find('a'))
+word = 'abcbad'
+print(word.find(word[1]))
